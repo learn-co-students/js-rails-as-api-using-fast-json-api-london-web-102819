@@ -44,3 +44,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#The Fast JSON API is a JSON serializer for Rails APIs. It provides a way for us to generate serializer classes for each resource object in our API that is involved in customized JSON rendering. 
+gem 'fast_jsonapi'

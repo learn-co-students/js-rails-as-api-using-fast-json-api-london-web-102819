@@ -20,7 +20,7 @@ The files in this lesson were populated using the API-only Rails build. Run
 
 ## Introduce the Fast JSON API
 
-The Fast JSON API is a JSON serializer for Rails APIs. It provides a way for us
+👉The Fast JSON API is a JSON serializer for Rails APIs. It provides a way for us
 to generate _serializer_ classes for each resource object in our API that is
 involved in customized JSON rendering. We can use these serializer classes to
 define the specific attributes we want objects to share or not share, along with
@@ -28,7 +28,7 @@ things like related object attributes.
 
 The result is that in our controller actions, rather than writing a custom
 `render` each time, we write out a serializer for each object once and use Fast
-JSON API to control the way our data is structured.
+JSON API to control the way our data is structured.👈
 
 ## Initial Configuration
 
@@ -101,7 +101,7 @@ Serializer classes, keeping our controller cleaner.
 To include Fast JSON API, add `gem 'fast_jsonapi'` to your Rails project's Gemfile
 and run `bundle install`.
 
-Once installed, you will gain access to a new generator, `serializer`.
+👉Once installed, you will gain access to a new generator, `serializer`.
 
 ## Implementing the Fast JSON API
 
@@ -167,7 +167,7 @@ But there is a problem still! If we fire up our Rails server and visit
 The serializer is working, but it behaves a little differently than we're 
 used to.
 
-## Adding Attributes
+## Adding Attributes 👈
 
 When rendering JSON directly, controllers will render all attributes available by
 default. These serializers work the other way around - we must always specify
@@ -247,16 +247,15 @@ This results in our rendered JSON including an `"attributes"` object with
 }
 ```
 
-However, here, we have no control over what attributes are included in the
+👉However, here, we have no control over what attributes are included in the
 related objects, and so we get _all_ the attributes of `"bird"` and
 `"location"`.
 
-## Adding Relationships
+## Adding Relationships 👈
 
 Object relationships can be included in serializers in two steps. The first step
-is that we include the relationships we want to reflect in our serializers. We
-can do this in the same way that we include them in the models themselves. A
-sighting, for instance, belongs to a bird and a location, so we can update the
+is that we include the relationships we want to reflect in our serializers.
+👉 We can do this in the same way that we include them in the models themselves. A sighting, for instance, belongs to a bird and a location, so we can update the
 serializer to reflect this:
 
 ```rb
